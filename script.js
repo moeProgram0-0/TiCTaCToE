@@ -16,6 +16,8 @@ const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 let circleTurn
+let xWins = 0; // Tally for X's wins
+let oWins = 0; // Tally for O's wins
 
 startGame()
 
@@ -52,6 +54,14 @@ function endGame(draw) {
     winningMessageTextElement.innerText = 'Draw!'
   } else {
     winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+    // Update the tally based on the winner
+    if (circleTurn) {
+      oWins++;
+      document.getElementById('oScore').innerText = oWins;
+    } else {
+      xWins++;
+      document.getElementById('xScore').innerText = xWins;
+    }
   }
   winningMessageElement.classList.add('show')
 }
