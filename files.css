@@ -1,6 +1,5 @@
 *, *::after, *::before {
   box-sizing: border-box;
-  /* background-color: black; */
 }
 
 :root {
@@ -10,6 +9,10 @@
 
 .aqua {
     color: aqua;
+}
+
+.fire{
+  color: crimson;
 }
 
 body {
@@ -47,11 +50,8 @@ body {
 .game_h1 {
  padding-top: 100px;
   z-index: 1;
-  color: red;
+  color: crimson;
 }
-
-
-
 
 .board {
     padding-bottom: 290px;
@@ -110,7 +110,7 @@ body {
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  background-color: red;
+  background-color: crimson;
 }
 
 .cell.x::before,
@@ -186,4 +186,23 @@ body {
 
 .winning-message.show {
   display: flex;
+}
+
+.tally {
+  position: absolute;
+  padding-bottom: 700px ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.tally p {
+    margin: 0;
+}
+
+.tally span {
+    font-weight: bold;
 }
