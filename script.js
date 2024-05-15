@@ -97,3 +97,4 @@ function checkWin(currentClass) {
     })
   })
 }
+
